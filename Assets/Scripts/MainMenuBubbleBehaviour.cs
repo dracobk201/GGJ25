@@ -1,19 +1,15 @@
-using ScriptableObjectArchitecture;
 using System.Collections;
 using UnityEngine;
 
-public class BubbleBehaviour : MonoBehaviour
+public class MainMenuBubbleBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameStatusReference gameStatus;
     [SerializeField] private Sprite[] bubbleOptions;
     [SerializeField] private SpriteRenderer bubbleSprite;
-    [SerializeField] private IntGameEvent applyPoints;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] audioPops;
     private BubbleData bubbleData;
-    public readonly float radio = 0.5f;
 
-    public void Setup(BubbleGenerator generator, BubbleData data)
+    public void Setup(BubbleData data)
     {
         bubbleData = data;
         bubbleData.GivenDirection = data.GivenDirection - transform.position;
@@ -48,18 +44,16 @@ public class BubbleBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void HandleImpact (Vector2 impactPosition)
+    public void HandleImpact(Vector2 impactPosition)
     {
-        if (gameStatus.Value.isGameOver) { return; }
         float distance = Vector2.Distance(transform.position, impactPosition);
-        if (distance <= radio)
+        if (distance <= 0.5f)
         {
             audioSource.clip = audioPops[Random.Range(0, audioPops.Length - 1)];
             audioSource.volume = Random.Range(0.3f, 0.8f);
             audioSource.pitch = Random.Range(0.4f, 1f);
             audioSource.Play();
 
-            applyPoints.Raise(bubbleData.pointsToGive);
             Invoke(nameof(DelayedDestroy), 0.2f);
         }
     }

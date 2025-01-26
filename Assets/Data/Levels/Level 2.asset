@@ -26,7 +26,7 @@ MonoBehaviour:
     - type: 4
       quantity: 5
     pointsToWin: 50
-    bubblesToWin: 0100000004000000
+    bubblesToWin: 0300000004000000
     pointsToLose: 25
     levelRuleLabel: An Alien eating Pizza?
     levelWonLabel: Big belly Alien

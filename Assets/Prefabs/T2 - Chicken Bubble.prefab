@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1045900619360827002, guid: cc0d2f9e74ea5b845a61cfc441a6b1e3, type: 3}
       propertyPath: m_Name
-      value: Type 2 Bubble
+      value: T2 - Chicken Bubble
       objectReference: {fileID: 0}
     - target: {fileID: 1836983106995651104, guid: cc0d2f9e74ea5b845a61cfc441a6b1e3, type: 3}
       propertyPath: m_LocalScale.x

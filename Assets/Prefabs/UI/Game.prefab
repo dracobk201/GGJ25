@@ -126,8 +126,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39e21d50811255f41acf66ea7cbceac1, type: 2}
+  m_sharedMaterial: {fileID: 4410756004720721045, guid: 39e21d50811255f41acf66ea7cbceac1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 82
-  m_fontSizeBase: 82
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -262,8 +262,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You need to tap only the RED ones.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39e21d50811255f41acf66ea7cbceac1, type: 2}
+  m_sharedMaterial: {fileID: 4410756004720721045, guid: 39e21d50811255f41acf66ea7cbceac1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -388,8 +388,7 @@ MonoBehaviour:
       points: 0
       actualLevelIndex: 0
       levelRuleLabel: 
-      levelWonLabel: 
-      levelLoseLabel: 
+      gameOverLabel: 
     _variable: {fileID: 11400000, guid: b008fd5d44e4f5840b36a1a77a7d61a4, type: 2}
   gameCanvasGroup: {fileID: 4619880838567548614}
   ruleText: {fileID: 7932717937940724054}
