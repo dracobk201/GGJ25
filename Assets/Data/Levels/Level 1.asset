@@ -13,23 +13,52 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   _value:
-    spawnerTimer: 2
-    gameCountdown: 30
+    spawnerTimer: 1
     timeSpeedFactor: 1
-    amountPerGeneration: 3
+    amountPerGeneration: 2
+    bubbles:
+    - type: 1
+      quantity: 4
+    - type: 2
+      quantity: 5
+    - type: 3
+      quantity: 7
+    - type: 4
+      quantity: 3
+    pointsToWin: 100
+    bubblesToWin: 01000000
+    pointsToLose: 50
+    levelRuleLabel: Eat! The! Cake!
+    levelWonLabel: '*Blurp* Do you have more?'
+    levelLoseLabel: Cake got hands!
+    pointsForVictory: 120
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0
   _minClampedValue:
     spawnerTimer: 0
-    gameCountdown: 0
     timeSpeedFactor: 0
     amountPerGeneration: 0
+    bubbles: []
+    pointsToWin: 0
+    bubblesToWin: 
+    pointsToLose: 0
+    levelRuleLabel: 
+    levelWonLabel: 
+    levelLoseLabel: 
+    pointsForVictory: 0
   _maxClampedValue:
     spawnerTimer: 0
-    gameCountdown: 0
     timeSpeedFactor: 0
     amountPerGeneration: 0
+    bubbles: []
+    pointsToWin: 0
+    bubblesToWin: 
+    pointsToLose: 0
+    levelRuleLabel: 
+    levelWonLabel: 
+    levelLoseLabel: 
+    pointsForVictory: 0
   _event:
     m_PersistentCalls:
       m_Calls: []

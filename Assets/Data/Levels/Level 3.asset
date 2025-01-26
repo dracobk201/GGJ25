@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d901e98c4aef3904c803bedc2a827316, type: 3}
+  m_Name: Level 3
+  m_EditorClassIdentifier: 
+  _value:
+    spawnerTimer: 2
+    timeSpeedFactor: 1.2
+    amountPerGeneration: 4
+    bubbles:
+    - type: 1
+      quantity: 10
+    - type: 2
+      quantity: 8
+    - type: 3
+      quantity: 10
+    - type: 4
+      quantity: 6
+    pointsToWin: 150
+    bubblesToWin: 04000000
+    pointsToLose: 30
+    levelRuleLabel: Space Invaders, ATTACK!
+    levelWonLabel: It was almost like Independence Day
+    levelLoseLabel: I think that end up pretty bad
+    pointsForVictory: 630
+  _readOnly: 0
+  _raiseWarning: 1
+  _isClamped: 0
+  _minClampedValue:
+    spawnerTimer: 0
+    timeSpeedFactor: 0
+    amountPerGeneration: 0
+    bubbles: []
+    pointsToWin: 0
+    bubblesToWin: 
+    pointsToLose: 0
+    levelRuleLabel: 
+    levelWonLabel: 
+    levelLoseLabel: 
+    pointsForVictory: 0
+  _maxClampedValue:
+    spawnerTimer: 0
+    timeSpeedFactor: 0
+    amountPerGeneration: 0
+    bubbles: []
+    pointsToWin: 0
+    bubblesToWin: 
+    pointsToLose: 0
+    levelRuleLabel: 
+    levelWonLabel: 
+    levelLoseLabel: 
+    pointsForVictory: 0
+  _event:
+    m_PersistentCalls:
+      m_Calls: []

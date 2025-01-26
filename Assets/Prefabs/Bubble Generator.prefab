@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9149848778323791677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104569441269826513}
+  - component: {fileID: 613140493162207181}
+  - component: {fileID: 1634778492034397743}
+  m_Layer: 0
+  m_Name: Bubble Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104569441269826513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149848778323791677}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613140493162207181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149848778323791677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f826768120164404fb03ac550f40ef9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStatus:
+    _useConstant: 0
+    _constantValue:
+      isGameOver: 0
+      bubbleTotalToExplode: 0
+      points: 0
+      actualLevelIndex: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+    _variable: {fileID: 11400000, guid: b008fd5d44e4f5840b36a1a77a7d61a4, type: 2}
+  bubblePrefabs:
+  - {fileID: 6850186811361864632, guid: 863fb5c499d676140aae1eeb71e506c9, type: 3}
+  - {fileID: 8371871741282366251, guid: b6ee3aaa472bfa041a13f67e112c7e47, type: 3}
+  - {fileID: 8371871741282366251, guid: 71caf7fff5c3cd044ba5e8c684db1e9f, type: 3}
+  - {fileID: 8371871741282366251, guid: f4a1e14b5d6204649b6c92c5d0953e9e, type: 3}
+  levelData:
+    _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+    _variable: {fileID: 11400000, guid: cf1ebd8f210974e41a020a8870683d34, type: 2}
+  noMoreBubbles: {fileID: 11400000, guid: 104889c46bd3b964eb2cc066b639c389, type: 2}
+--- !u!114 &1634778492034397743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149848778323791677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3519b53a01fb654ab83c7081d909c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 74872e88f537cd34c986c37df7753b33, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 613140493162207181}
+        m_TargetAssemblyTypeName: BubbleGenerator, Assembly-CSharp
+        m_MethodName: InitializeList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _debugValue:
+    spawnerTimer: 0
+    timeSpeedFactor: 0
+    amountPerGeneration: 0
+    bubbles: []
+    pointsToWin: 0
+    bubblesToWin: 
+    pointsToLose: 0
+    levelRuleLabel: 
+    levelWonLabel: 
+    levelLoseLabel: 
