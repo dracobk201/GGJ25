@@ -13,25 +13,25 @@ MonoBehaviour:
   m_Name: Level 3
   m_EditorClassIdentifier: 
   _value:
-    spawnerTimer: 2
-    timeSpeedFactor: 1.2
-    amountPerGeneration: 4
+    spawnerTimer: 1.5
+    timeSpeedFactor: 1
+    amountPerGeneration: 2
     bubbles:
     - type: 1
-      quantity: 10
+      quantity: 4
     - type: 2
-      quantity: 8
+      quantity: 5
     - type: 3
-      quantity: 10
+      quantity: 7
     - type: 4
-      quantity: 6
-    pointsToWin: 150
-    bubblesToWin: 04000000
-    pointsToLose: 30
-    levelRuleLabel: Space Invaders, ATTACK!
-    levelWonLabel: It was almost like Independence Day
-    levelLoseLabel: I think that end up pretty bad
-    pointsForVictory: 630
+      quantity: 3
+    pointsToWin: 100
+    bubblesToWin: 01000000
+    pointsToLose: 50
+    levelRuleLabel: Eat! The! Cake!
+    levelWonLabel: '*Blurp* Do you have more?'
+    levelLoseLabel: Cake got hands!
+    pointsForVictory: 120
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

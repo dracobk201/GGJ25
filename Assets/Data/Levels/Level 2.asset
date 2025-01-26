@@ -13,25 +13,23 @@ MonoBehaviour:
   m_Name: Level 2
   m_EditorClassIdentifier: 
   _value:
-    spawnerTimer: 1
+    spawnerTimer: 1.5
     timeSpeedFactor: 1
-    amountPerGeneration: 5
+    amountPerGeneration: 2
     bubbles:
     - type: 1
-      quantity: 10
+      quantity: 4
     - type: 2
-      quantity: 8
+      quantity: 4
     - type: 3
-      quantity: 10
-    - type: 4
-      quantity: 5
-    pointsToWin: 50
-    bubblesToWin: 0300000004000000
-    pointsToLose: 25
-    levelRuleLabel: An Alien eating Pizza?
-    levelWonLabel: Big belly Alien
-    levelLoseLabel: Nooo, those Aliens didn't eat enough
-    pointsForVictory: 525
+      quantity: 4
+    pointsToWin: 100
+    bubblesToWin: 03000000
+    pointsToLose: 50
+    levelRuleLabel: Pop pizza to win
+    levelWonLabel: Great, everyone will get a Pizza
+    levelLoseLabel: Sorry, not enough pizza
+    pointsForVictory: 280
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

@@ -60,7 +60,7 @@ public class BubbleBehaviour : MonoBehaviour
             audioSource.Play();
 
             applyPoints.Raise(bubbleData.pointsToGive);
-            Invoke(nameof(DelayedDestroy), 0.2f);
+            Invoke(nameof(DelayedDestroy), 0.1f);
         }
     }
 

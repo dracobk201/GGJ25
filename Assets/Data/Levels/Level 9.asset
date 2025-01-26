@@ -10,24 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d901e98c4aef3904c803bedc2a827316, type: 3}
-  m_Name: Level 1
+  m_Name: Level 9
   m_EditorClassIdentifier: 
   _value:
     spawnerTimer: 2
-    timeSpeedFactor: 1
-    amountPerGeneration: 2
+    timeSpeedFactor: 1.2
+    amountPerGeneration: 6
     bubbles:
     - type: 1
-      quantity: 3
+      quantity: 10
     - type: 2
-      quantity: 7
-    pointsToWin: 100
-    bubblesToWin: 02000000
-    pointsToLose: 50
-    levelRuleLabel: Tap the chickens to earn points
-    levelWonLabel: You win!
-    levelLoseLabel: Oh, no. You lose!
-    pointsForVictory: 490
+      quantity: 8
+    - type: 3
+      quantity: 8
+    - type: 4
+      quantity: 12
+    pointsToWin: 150
+    bubblesToWin: 04000000
+    pointsToLose: 100
+    levelRuleLabel: 2 Fast, 2 Alien
+    levelWonLabel: It's done but did you watch Arrival?
+    levelLoseLabel: Aw, dang. They didn't want to communicate
+    pointsForVictory: 1300
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

@@ -54,7 +54,7 @@ public class MainMenuBubbleBehaviour : MonoBehaviour
             audioSource.pitch = Random.Range(0.4f, 1f);
             audioSource.Play();
 
-            Invoke(nameof(DelayedDestroy), 0.2f);
+            Invoke(nameof(DelayedDestroy), 0.1f);
         }
     }
 

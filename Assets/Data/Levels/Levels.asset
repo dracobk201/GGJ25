@@ -25,6 +25,35 @@ MonoBehaviour:
       levelRuleLabel: 
       levelWonLabel: 
       levelLoseLabel: 
+      pointsForVictory: 0
+    _variable: {fileID: 11400000, guid: d086263b640a9604ea65d491bbc836be, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+      pointsForVictory: 0
+    _variable: {fileID: 11400000, guid: 351226691d335d34fa082c1a8a26fd59, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+      pointsForVictory: 0
     _variable: {fileID: 11400000, guid: cf1ebd8f210974e41a020a8870683d34, type: 2}
   - _useConstant: 0
     _constantValue:
@@ -38,6 +67,7 @@ MonoBehaviour:
       levelRuleLabel: 
       levelWonLabel: 
       levelLoseLabel: 
+      pointsForVictory: 0
     _variable: {fileID: 11400000, guid: 39109d2ca26d7b24995c72268467ad77, type: 2}
   - _useConstant: 0
     _constantValue:
@@ -51,4 +81,75 @@ MonoBehaviour:
       levelRuleLabel: 
       levelWonLabel: 
       levelLoseLabel: 
+      pointsForVictory: 0
     _variable: {fileID: 11400000, guid: fd5ccae3e3fa6eb43bb550d0912295a1, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+      pointsForVictory: 0
+    _variable: {fileID: 11400000, guid: 90b7b1350099ef64ba0a564fcf62316a, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+      pointsForVictory: 0
+    _variable: {fileID: 11400000, guid: 4024beb2a09bc6c4b87c51eb7324d81a, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+      pointsForVictory: 0
+    _variable: {fileID: 11400000, guid: 0e259243ddf5fb04eb2420109ee73528, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+      pointsForVictory: 0
+    _variable: {fileID: 11400000, guid: 085a69eb8840c08479e51a47d3f49e85, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      spawnerTimer: 0
+      timeSpeedFactor: 0
+      amountPerGeneration: 0
+      bubbles: []
+      pointsToWin: 0
+      bubblesToWin: 
+      pointsToLose: 0
+      levelRuleLabel: 
+      levelWonLabel: 
+      levelLoseLabel: 
+      pointsForVictory: 0
+    _variable: {fileID: 11400000, guid: da93721d157a2ac4d943163334e3ed24, type: 2}

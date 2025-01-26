@@ -10,24 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d901e98c4aef3904c803bedc2a827316, type: 3}
-  m_Name: Level 1
+  m_Name: Level 8
   m_EditorClassIdentifier: 
   _value:
-    spawnerTimer: 2
-    timeSpeedFactor: 1
-    amountPerGeneration: 2
+    spawnerTimer: 1
+    timeSpeedFactor: 1.4
+    amountPerGeneration: 4
     bubbles:
     - type: 1
-      quantity: 3
+      quantity: 9
     - type: 2
-      quantity: 7
-    pointsToWin: 100
-    bubblesToWin: 02000000
-    pointsToLose: 50
-    levelRuleLabel: Tap the chickens to earn points
-    levelWonLabel: You win!
-    levelLoseLabel: Oh, no. You lose!
-    pointsForVictory: 490
+      quantity: 9
+    - type: 3
+      quantity: 8
+    - type: 4
+      quantity: 6
+    pointsToWin: 111
+    bubblesToWin: 03000000
+    pointsToLose: 123
+    levelRuleLabel: I'm italian
+    levelWonLabel: Mamma mia, pizza squisita
+    levelLoseLabel: "Ma cos'\xE8 questo?"
+    pointsForVictory: 621
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

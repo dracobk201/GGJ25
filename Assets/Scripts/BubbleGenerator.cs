@@ -26,7 +26,7 @@ public class BubbleGenerator : MonoBehaviour
     {
         if (levelData == null || gameStatus.Value.isGameOver) return;
 
-        actualTime += Time.deltaTime * levelData.Value.timeSpeedFactor;
+        actualTime += Time.deltaTime * levelData.Value.timeSpeedFactor * gameStatus.Value.overwrittenSpeed;
         if (actualTime > levelData.Value.spawnerTimer)
         {
             GenerateBubbles(levelData.Value.amountPerGeneration);
@@ -56,21 +56,23 @@ public class BubbleGenerator : MonoBehaviour
         for (int i = 0; i < generationAmount; i++)
         {
             BubbleObject bubbleToSpawn = bubblesToSpawn.FirstOrDefault(b => !b.isSpawned);
-
-            if (bubbleToSpawn == null && !isCollectionEmpty)
+            if (bubbleToSpawn == null)
             {
-                isCollectionEmpty = true;
-                noMoreBubbles.Raise();
+                if (!isCollectionEmpty)
+                {
+                    isCollectionEmpty = true;
+                    noMoreBubbles.Raise();
+                }
                 return;
             }
             Vector3 randomPosition = GetRandomPositionOutsideScreen();
 
             int arrayIndex = bubbleToSpawn.type switch
             {
-                BubbleTypeEnum.Type1 => 0,
-                BubbleTypeEnum.Type2 => 1,
-                BubbleTypeEnum.Type3 => 2,
-                BubbleTypeEnum.Type4 => 3,
+                BubbleTypeEnum.Cake => 0,
+                BubbleTypeEnum.Chicken => 1,
+                BubbleTypeEnum.Pizza => 2,
+                BubbleTypeEnum.Alien => 3,
                 _ => 0,
             };
             GameObject bubbles = Instantiate(bubblePrefabs[arrayIndex], randomPosition, Quaternion.identity, transform);
@@ -80,14 +82,14 @@ public class BubbleGenerator : MonoBehaviour
 
             BubbleData bubbleInfo = new BubbleData();
             bubbleInfo.BubbleLifespan = 10f;
-            bubbleInfo.BubbleMovementSpeed = UnityEngine.Random.Range(0.001f, 0.3f);
-            bubbleInfo.BubbleRotationSpeed = UnityEngine.Random.Range(3f, 50f);
+            bubbleInfo.BubbleMovementSpeed = UnityEngine.Random.Range(0.01f, 0.3f);
+            bubbleInfo.BubbleRotationSpeed = UnityEngine.Random.Range(3f, 50f) * gameStatus.Value.overwrittenSpeed;
             bubbleInfo.GivenDirection = GetRandomPositionInsideScreen();
             bubbleInfo.BubbleType = bubbleToSpawn.type;
             bubbleInfo.pointsToGive = levelData.Value.bubblesToWin.Contains(bubbleToSpawn.type) ? 
                 levelData.Value.pointsToWin :
                 -levelData.Value.pointsToLose;
-            bubbleInfo.timeSpeedFactor = 1;
+            bubbleInfo.timeSpeedFactor = 1 * gameStatus.Value.overwrittenSpeed;
 
             int bubbleRotationOrientation;
             if (UnityEngine.Random.value > 0.5f)
@@ -142,9 +144,10 @@ public class BubbleGenerator : MonoBehaviour
     private Vector3 GetRandomPositionInsideScreen()
     {
         Vector3 screenPosition = Vector3.zero;
+        float margin = 20;
 
-        screenPosition.y = UnityEngine.Random.Range(0, Screen.height);
-        screenPosition.x = UnityEngine.Random.Range(0, Screen.width);
+        screenPosition.y = UnityEngine.Random.Range(margin, Screen.height-margin);
+        screenPosition.x = UnityEngine.Random.Range(margin, Screen.width-margin);
         screenPosition.z = gameCamera.farClipPlane / 2;
         Vector3 worldPosition = gameCamera.ScreenToWorldPoint(screenPosition);
 

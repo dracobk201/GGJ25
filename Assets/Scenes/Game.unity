@@ -464,6 +464,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1335836240
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4908205078889489790, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_Name
+      value: Main Menu Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485317692389451421, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69ec0c0648ebdf64f809e7924d9e3a10, type: 3}
 --- !u!1 &1421791767
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,12 +604,14 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue:
       isGameOver: 0
+      didYouWin: 0
       bubbleTotalToExplode: 0
       points: 0
+      neededPoints: 0
       actualLevelIndex: 0
+      overwrittenSpeed: 0
       levelRuleLabel: 
-      levelWonLabel: 
-      levelLoseLabel: 
+      gameOverLabel: 
     _variable: {fileID: 11400000, guid: b008fd5d44e4f5840b36a1a77a7d61a4, type: 2}
   levelsList: {fileID: 11400000, guid: 79ceac029840616468b291550da64ef2, type: 2}
   setupLevel: {fileID: 11400000, guid: 74872e88f537cd34c986c37df7753b33, type: 2}
@@ -571,7 +630,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 104889c46bd3b964eb2cc066b639c389, type: 2}
   _event: {fileID: 11400000, guid: 104889c46bd3b964eb2cc066b639c389, type: 2}
   _response:
     m_PersistentCalls:
@@ -877,3 +936,4 @@ SceneRoots:
   - {fileID: 4739757432623730710}
   - {fileID: 2030008658062441541}
   - {fileID: 50621521}
+  - {fileID: 1335836240}
