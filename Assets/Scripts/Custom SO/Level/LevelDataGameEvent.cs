@@ -5,7 +5,7 @@ namespace ScriptableObjectArchitecture
     [System.Serializable]
     [CreateAssetMenu(
         fileName = "LevelDataGameEvent.asset",
-        menuName = SOArchitecture_Utility.GAME_EVENT + "LevelData",
+        menuName = SOArchitecture_Utility.GAME_EVENT + "BubbleMadness/LevelData",
         order = SOArchitecture_Utility.ASSET_MENU_ORDER_EVENTS + 2)]
     public sealed class LevelDataGameEvent : GameEventBase<LevelData>
     {

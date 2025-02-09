@@ -6,7 +6,7 @@ using ScriptableObjectArchitecture;
 public class GameStatusEvent : UnityEvent<GameStatus> { }
 [CreateAssetMenu(
         fileName = "GameStatusVariable.asset",
-        menuName = SOArchitecture_Utility.VARIABLE_SUBMENU + "Other/GameStatus")]
+        menuName = SOArchitecture_Utility.VARIABLE_SUBMENU + "BubbleMadness/GameStatus")]
 public sealed class GameStatusVariable : BaseVariable<GameStatus, GameStatusEvent>
 {
 }

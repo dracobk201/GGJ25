@@ -1,3 +1,4 @@
+using ScriptableObjectArchitecture;
 using System.Collections;
 using UnityEngine;
 
@@ -5,8 +6,9 @@ public class MainMenuBubbleBehaviour : MonoBehaviour
 {
     [SerializeField] private Sprite[] bubbleOptions;
     [SerializeField] private SpriteRenderer bubbleSprite;
-    [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] audioPops;
+    [SerializeField] private AudioClipGameEvent soundToPlay;
+    [SerializeField] private IntGameEvent applyPoints;
     private BubbleData bubbleData;
 
     public void Setup(BubbleData data)
@@ -41,7 +43,7 @@ public class MainMenuBubbleBehaviour : MonoBehaviour
     private IEnumerator SelfDestroyBubble()
     {
         yield return new WaitForSeconds(bubbleData.BubbleLifespan);
-        Destroy(gameObject);
+        DestroyBubble();
     }
 
     public void HandleImpact(Vector2 impactPosition)
@@ -49,17 +51,14 @@ public class MainMenuBubbleBehaviour : MonoBehaviour
         float distance = Vector2.Distance(transform.position, impactPosition);
         if (distance <= 0.5f)
         {
-            audioSource.clip = audioPops[Random.Range(0, audioPops.Length - 1)];
-            audioSource.volume = Random.Range(0.3f, 0.8f);
-            audioSource.pitch = Random.Range(0.4f, 1f);
-            audioSource.Play();
-
-            Invoke(nameof(DelayedDestroy), 0.1f);
+            applyPoints.Raise(1);
+            Invoke(nameof(DestroyBubble), 0.01f);
         }
     }
 
-    private void DelayedDestroy()
+    private void DestroyBubble()
     {
+        soundToPlay.Raise(audioPops[Random.Range(0, audioPops.Length - 1)]);
         Destroy(gameObject);
     }
 }

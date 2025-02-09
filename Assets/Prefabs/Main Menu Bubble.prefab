@@ -104,17 +104,13 @@ MonoBehaviour:
   - {fileID: 5527841993057076415, guid: 6d18be99e8f90e34bbf363a3a48c2fea, type: 3}
   - {fileID: 1396969699372852806, guid: c8f833cc65288064196774940996cd34, type: 3}
   bubbleSprite: {fileID: 8874683398622760636}
-  audioSource: {fileID: 4663575725116271036}
   audioPops:
   - {fileID: 8300000, guid: f592215816e73cc4fbf2c449d39d8c5a, type: 3}
   - {fileID: 8300000, guid: 4ea0f46b48fa4ef459783672fde9e596, type: 3}
   - {fileID: 8300000, guid: cf6d347061ee6764399bfef9cc368594, type: 3}
   - {fileID: 8300000, guid: d70006e69509ae44987534787d89dc64, type: 3}
---- !u!82 &4663575725116271036 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5775712816900103463, guid: cc0d2f9e74ea5b845a61cfc441a6b1e3, type: 3}
-  m_PrefabInstance: {fileID: 1197725905350358171}
-  m_PrefabAsset: {fileID: 0}
+  soundToPlay: {fileID: 11400000, guid: 545f05497ddbb05468cf9e428e09728e, type: 2}
+  applyPoints: {fileID: 11400000, guid: ea993f3992975ce48acf9a84e71a62c8, type: 2}
 --- !u!212 &8874683398622760636 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7761418334989957671, guid: cc0d2f9e74ea5b845a61cfc441a6b1e3, type: 3}

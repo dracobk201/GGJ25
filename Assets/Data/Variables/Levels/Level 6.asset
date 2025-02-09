@@ -29,7 +29,7 @@ MonoBehaviour:
     bubblesToWin: 01000000020000000300000004000000
     pointsToLose: 0
     levelRuleLabel: Smash Everything!!!
-    levelWonLabel: Wait, wait, there's nothign else to smash
+    levelWonLabel: Wait, wait, there's nothing else to smash
     levelLoseLabel: I think you need to smash faster
     pointsForVictory: 2975
   _readOnly: 0

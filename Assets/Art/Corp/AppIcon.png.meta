@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 841563550fbf8544480cba74127e87d4
+guid: 1725bcc8a5ff70d4e96584eb52e4c44d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8253693580697153932
-    second: Torta_0
+      213: 982360510996237158
+    second: AppIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Torta_0
+      name: AppIcon_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 24
-        width: 380
-        height: 364
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c81306ae4920b8270800000000000000
-      internalID: 8253693580697153932
+      spriteID: 66b4d431eab02ad00800000000000000
+      internalID: 982360510996237158
       vertices: []
       indices: 
       edges: []

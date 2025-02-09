@@ -8,10 +8,30 @@ public class BubbleBehaviour : MonoBehaviour
     [SerializeField] private Sprite[] bubbleOptions;
     [SerializeField] private SpriteRenderer bubbleSprite;
     [SerializeField] private IntGameEvent applyPoints;
-    [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] audioPops;
+    [SerializeField] private AudioClipGameEvent soundToPlay;
+
+    [SerializeField] private GameObject internalItem;
     private BubbleData bubbleData;
     public readonly float radio = 0.5f;
+
+    private void Awake()
+    {
+        bubbleData = new BubbleData();
+        bubbleData.BubbleLifespan = 10f;
+        bubbleData.BubbleType = BubbleTypeEnum.Cake;
+        bubbleData.BubbleRotationSpeed = Random.Range(3f, 50f);
+        bubbleData.BubbleMovementSpeed = Random.Range(0.01f, 0.3f);
+        bubbleData.timeSpeedFactor = 1;
+        bubbleData.BubbleOrientation = Random.value > 0.5f ? 1 : -1;
+        bubbleData.GivenDirection = new Vector3(0,5,0);
+        bubbleData.pointsToGive = 1;
+    }
+
+    private void Start()
+    {
+        LeanTween.rotateAround(internalItem, Vector3.forward, 180f, 5f).setEase(LeanTweenType.easeInBack);
+    }
 
     public void Setup(BubbleGenerator generator, BubbleData data)
     {
@@ -45,7 +65,7 @@ public class BubbleBehaviour : MonoBehaviour
     private IEnumerator SelfDestroyBubble()
     {
         yield return new WaitForSeconds(bubbleData.BubbleLifespan);
-        Destroy(gameObject);
+        DestroyBubble();
     }
 
     public void HandleImpact (Vector2 impactPosition)
@@ -54,18 +74,14 @@ public class BubbleBehaviour : MonoBehaviour
         float distance = Vector2.Distance(transform.position, impactPosition);
         if (distance <= radio)
         {
-            audioSource.clip = audioPops[Random.Range(0, audioPops.Length - 1)];
-            audioSource.volume = Random.Range(0.3f, 0.8f);
-            audioSource.pitch = Random.Range(0.4f, 1f);
-            audioSource.Play();
-
             applyPoints.Raise(bubbleData.pointsToGive);
-            Invoke(nameof(DelayedDestroy), 0.1f);
+            Invoke(nameof(DestroyBubble), 0.01f);
         }
     }
 
-    private void DelayedDestroy()
+    private void DestroyBubble()
     {
+        soundToPlay.Raise(audioPops[Random.Range(0, audioPops.Length - 1)]);
         Destroy(gameObject);
     }
 }

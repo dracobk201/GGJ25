@@ -11,7 +11,6 @@ public class MainMenuBubbleGenerator : MonoBehaviour
     private Camera gameCamera;
     private float maxTime = 1f;
     private float actualTime;
-    private bool isCollectionEmpty = false;
 
     private void Awake()
     {
@@ -25,7 +24,7 @@ public class MainMenuBubbleGenerator : MonoBehaviour
         actualTime += Time.deltaTime;
         if (actualTime > maxTime)
         {
-            GenerateBubbles(UnityEngine.Random.Range(1,10));
+            GenerateBubbles(UnityEngine.Random.Range(5,15));
             actualTime = 0f;
         }
     }
@@ -42,7 +41,7 @@ public class MainMenuBubbleGenerator : MonoBehaviour
 
             BubbleData bubbleInfo = new BubbleData();
             bubbleInfo.BubbleLifespan = 10f;
-            bubbleInfo.BubbleMovementSpeed = UnityEngine.Random.Range(0.01f, 1f);
+            bubbleInfo.BubbleMovementSpeed = UnityEngine.Random.Range(0.05f, 0.8f);
             bubbleInfo.BubbleRotationSpeed = UnityEngine.Random.Range(3f, 70f);
             bubbleInfo.GivenDirection = GetRandomPositionInsideScreen();
             bubbleInfo.timeSpeedFactor = 1;
