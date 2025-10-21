@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cgj2013-thumb_0: -6832072150752983976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
